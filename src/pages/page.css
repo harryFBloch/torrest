@@ -32,6 +32,14 @@
   padding: 80px;
 }
 
+.center-page {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
 .about-info {
   width: 20%;
 }
@@ -40,11 +48,32 @@
   width: 64px;
 }
 
+.small-icon {
+  width: 32px;
+  fill: gray;
+  stroke: gray;
+  margin-right: 32px;
+}
+
+.icon-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 16px;
+}
+
 .line {
   width: 2px;
   flex: none;
   background: gray;
   margin: 32px;
+}
+
+.nonlink {
+  text-decoration: none;
 }
 
 
