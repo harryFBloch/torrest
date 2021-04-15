@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 import {ReactComponent as Mail} from '../images/icons/mail.svg';
 
 import './page.css';
@@ -30,4 +31,4 @@ const contact = (props) => {
   )
 }
 
-export default contact;
+export default withRouter(contact);
