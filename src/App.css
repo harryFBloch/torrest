@@ -32,6 +32,14 @@ button:focus {
   outline: 2px gray solid;
 }
 
+body{
+  color: grey;
+}
+
+button{
+  color: grey;
+}
+
 p {
   text-align: center;
 }

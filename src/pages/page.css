@@ -8,6 +8,7 @@
 .space-container {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 32px;
 }
 
 .full {
@@ -36,7 +37,7 @@
 }
 
 .about-icon {
-  width: 45px;
+  width: 64px;
 }
 
 .line {
