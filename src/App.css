@@ -52,6 +52,10 @@ p {
   position: absolute;
 }
 
+h2 {
+  margin: 16px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -19,13 +19,13 @@ const contact = (props) => {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non nisi est sit amet.</p>
       </div>
 
-      <div className="container">
-      <a href="mailto:Info@torrestmusic.com" className="nonlink">
-        <button className="nav-button icon-button">
-          <Mail className="small-icon"/>
-          Info@torrestmusic.com
-        </button>
-      </a>
+      <div className="container top-margin">
+        <a href="mailto:Info@torrestmusic.com" className="nonlink">
+          <button className="nav-button icon-button">
+            <Mail className="small-icon"/>
+            Info@torrestmusic.com
+          </button>
+        </a>
       </div>
     </div>
   )
