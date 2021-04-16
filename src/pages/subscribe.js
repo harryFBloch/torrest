@@ -13,7 +13,7 @@ const subscribe = (props) => {
       </div>
 
       <div>
-          <h2 className="title">Joins Us</h2>
+          <h2 className="title">Join Us</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non nisi est sit amet.</p>
       </div>
 
