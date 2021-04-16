@@ -44,6 +44,14 @@ p {
   text-align: center;
 }
 
+.switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
