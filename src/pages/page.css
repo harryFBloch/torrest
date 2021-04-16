@@ -76,6 +76,10 @@
   text-decoration: none;
 }
 
+.chimpContainer {
+  margin-top: 32px;
+}
+
 
 @media only screen and (max-width: 800px) {
 
@@ -94,6 +98,10 @@
  .line{
   width: auto;
   height: 2px;
+ }
+
+ .center-page {
+   width: 80%;
  }
 
 }
