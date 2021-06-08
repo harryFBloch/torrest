@@ -23,7 +23,7 @@
   margin-top: 8px;
   margin-left: 8px;
   padding: 8px;
-  border: gray 1px solid;
+  border: var(--font) 1px solid;
   background: transparent;
   font-family: 'Montserrat', sans-serif;
 }
@@ -50,6 +50,8 @@
 
 .about-icon {
   width: 64px;
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 1));
+  height: 64px;
 }
 
 .small-icon {
@@ -57,6 +59,7 @@
   fill: gray;
   stroke: gray;
   margin-right: 32px;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 1));
 }
 
 .icon-button {
@@ -72,7 +75,7 @@
 .line {
   width: 2px;
   flex: none;
-  background: gray;
+  background: var(--font);
   margin: 32px;
 }
 
@@ -102,10 +105,20 @@
  .line{
   width: auto;
   height: 2px;
+  margin: 8px;
  }
 
  .center-page {
    width: 80%;
+ }
+
+ .about-icon{
+   width: 40px;
+   height: 40px;
+ }
+
+ p{
+   font-size: 14px;
  }
 
 }

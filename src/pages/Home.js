@@ -1,6 +1,6 @@
 import React, {ReactElement} from 'react';
 import { withRouter } from 'react-router';
-import Logo from '../images/logo/BlackDiamond.png';
+import Logo from '../images/logo/WhiteDiamond.png';
 import { ICONS } from '../ICONS';
 import './Home.css';
 
@@ -31,7 +31,7 @@ const Home = (props) => {
           {renderNavButton('about', "About")}
           <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UC9xloc0P5Qf5FSCrZ7oEmJQ">
             <button className="nav-button">
-              Our Videos
+                Our Videos
             </button>
           </a>
           <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/TorrestMusic/events/">

@@ -16,7 +16,7 @@ const contact = (props) => {
 
       <div>
           <h2 className="title">Contact</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non nisi est sit amet.</p>
+          <p>To work with us in any capacity or to join our team, send us an email! We love hearing from you!</p>
       </div>
 
       <div className="container top-margin">

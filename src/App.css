@@ -1,3 +1,7 @@
+:root {
+  --font: rgba(242, 241, 239, 1);
+}
+
 .App {
   text-align: center;
 }
@@ -29,15 +33,20 @@
 }
 
 button:focus {
-  outline: 2px gray solid;
+  outline: 2px var(--font) solid;
 }
 
 body{
-  color: grey;
+  color: var(--font);
+  background-color: black;
+  text-shadow: 0 0 20px rgba(0, 0, 0.5);
 }
 
 button{
-  color: grey;
+  color: var(--font);
+  background: transparent;
+  border: solid 2px var(--font);
+  text-shadow: 0 0 20px rgba(0, 0, 0.5);
 }
 
 p {
@@ -52,8 +61,22 @@ p {
   position: absolute;
 }
 
+input {
+  margin-right: 8px;
+}
+
 h2 {
   margin: 16px;
+}
+
+.zlider{
+  filter: brightness(50%);
+}
+
+.skrim {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5rem rgba(0, 0, 0.5);
 }
 
 @keyframes App-logo-spin {
