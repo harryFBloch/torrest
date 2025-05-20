@@ -1,35 +1,49 @@
 import React from 'react';
-import { withRouter } from 'react-router';
-import MailChimp from '../components/mailChimp';
 import './page.css';
+import { useNavigate } from 'react-router-dom';
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 
-const subscribe = (props) => {
+const Subscribe = () => {
+  const navigate = useNavigate();
+  const url = "https://torrest.us1.list-manage.com/subscribe/post?u=YOUR_MAILCHIMP_U&id=YOUR_MAILCHIMP_ID";
+
   return (
-    <div className="center-page">
-      
+    <div className="page-container">
+      <div className="center-page">
         <div className="container">
-          <button className="nav-button" onClick={() => props.history.goBack()}>Back</button>
+          <button className="nav-button" onClick={() => navigate(-1)}>Back</button>
         </div>
-      
-
-      <div>
-          <h2 className="title">Join Us</h2>
-          <p>Add your email below to join our mailing list and always be notified of our upcoming live events, live streams and the release of our full set videos!</p>
-      </div>
-
-
-      <div className="chimpContainer">
-        < MailChimp />
-      </div>
-      <div>
-        <p>Join our Torrests private Facebook group to interact with other fans and to always be in the know</p>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/groups/484833792566059">
-          <button className="nav-button">BECOME A TORRESTS MEMBER</button>
-        </a>
+        <h2 className="title">Subscribe</h2>
+        <p>Stay updated with our latest events and news!</p>
+        <div className="chimpContainer">
+          <MailchimpSubscribe
+            url={url}
+            render={({ subscribe, status, message }) => (
+              <div>
+                <form onSubmit={(e) => {
+                  e.preventDefault();
+                  subscribe({
+                    EMAIL: e.target.email.value
+                  });
+                }}>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your email"
+                    required
+                  />
+                  <button type="submit">Subscribe</button>
+                </form>
+                {status === "sending" && <div>Subscribing...</div>}
+                {status === "error" && <div dangerouslySetInnerHTML={{ __html: message }} />}
+                {status === "success" && <div>Subscribed!</div>}
+              </div>
+            )}
+          />
+        </div>
       </div>
     </div>
-    
-  )
-}
+  );
+};
 
-export default withRouter(subscribe);
+export default Subscribe;

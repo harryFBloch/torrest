@@ -1,13 +1,14 @@
-import React, {ReactElement} from 'react';
-import { withRouter } from 'react-router';
+import React from 'react';
+import './Home.css';
+import { useNavigate } from 'react-router-dom';
 import Logo from '../images/logo/WhiteDiamond.png';
 import { ICONS } from '../ICONS';
-import './Home.css';
 
-const Home = (props) => {
+const Home = () => {
+  const navigate = useNavigate();
 
   const renderNavButton = (page, text, link) => (
-    <button className="nav-button" onClick={() => props.history.push(`/${page}`)}>
+    <button className="nav-button" onClick={() => navigate(`/${page}`)}>
       {text}
     </button>
   )
@@ -51,4 +52,4 @@ const Home = (props) => {
   )
 }
 
-export default withRouter(Home);
+export default Home;

@@ -4,6 +4,9 @@
 
 .App {
   text-align: center;
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -86,4 +89,41 @@ h2 {
   to {
     transform: rotate(360deg);
   }
+}
+
+.background-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Override slick-carousel default styles */
+.slick-slider {
+  width: 100%;
+  height: 100%;
+}
+
+.slick-list,
+.slick-track {
+  height: 100%;
+}
+
+.slick-slide > div {
+  height: 100%;
 }
